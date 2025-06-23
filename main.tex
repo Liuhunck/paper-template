@@ -1,0 +1,64 @@
+% Preamble
+\documentclass{hnu}
+
+% Packages
+\usepackage{array}
+\usepackage{pifont}
+\usepackage{amsmath}
+\usepackage{overpic}
+\usepackage{bookmark}
+\usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage{fontspec}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{subcaption}
+\usepackage{algorithmicx}
+\usepackage{algpseudocodex}
+\usepackage{pkgs/cover}
+\usepackage{pkgs/copyright}
+\usepackage{pkgs/tocloflot}
+\usepackage{pkgs/bibliography}
+\usepackage{pkgs/appendix}
+
+\setlist[itemize]{itemsep=0pt, topsep=0pt, partopsep=0pt, parsep=0pt}
+\setlist[enumerate]{itemsep=0pt, topsep=0pt, partopsep=0pt, parsep=0pt}
+
+% Document
+\begin{document}
+    \createCover % 封面
+
+    \frontmatter
+    \createCopyright % 版权
+
+    % ========================================摘要部分
+    \input{docs/abstract}
+    % ========================================摘要部分
+
+    \createTOC % 目录
+    \createLOF % 插图索引
+    \createLOT % 附表索引
+
+    \mainmatter
+    % ========================================正文部分
+    \input{docs/chapters/chap1-绪论}
+    \input{docs/chapters/chap2-国内外相关研究}
+    \input{docs/chapters/chap6-总结与展望}
+    % ========================================正文部分
+
+    % 参考文献
+    \createBibliography
+
+    % ========================================致谢部分
+    \input{docs/thanks}
+    % ========================================致谢部分
+
+    % 附录
+    % \createAppendix
+    % ========================================附录部分
+    % \input{docs/appendices/appendix1}
+    % \input{docs/appendices/appendix2}
+    % \input{docs/appendices/appendix3}
+    % ========================================附录部分
+\end{document}
